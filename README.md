@@ -55,7 +55,7 @@ Camera feed is captured frame by frame via OpenCV. YOLOv8 runs on each frame and
 ## Run It
 
 ```bash
-git clone https://github.com/yourusername/Smart-Shop-Crowd-Monitoring
+git clone https://github.com/Anmolg3502tx/Smart-Shop-Crowd-Monitoring
 cd Smart-Shop-Crowd-Monitoring
 pip install -r requirements.txt
 python detect.py
