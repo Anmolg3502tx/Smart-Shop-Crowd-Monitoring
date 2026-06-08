@@ -59,3 +59,11 @@ git clone https://github.com/yourusername/Smart-Shop-Crowd-Monitoring
 cd Smart-Shop-Crowd-Monitoring
 pip install -r requirements.txt
 python detect.py
+ ```
+
+
+## Future Improvements
+I plan to improve this system further. The next version will include theft detection using pose estimation and suspicious behaviour analysis. It will trigger a loud alarm at the shop automatically when suspicious activity is detected, not just a phone alert. This will make it a complete shop security system, not just a crowd monitor.
+
+## Built By
+Anmol Gupta, B.Tech CSE (AI & ML), KR Mangalam University. Originally built for Skyline Shop, Badarpur, Delhi. Made open source so any shop owner can use it.
