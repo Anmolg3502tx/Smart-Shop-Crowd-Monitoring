@@ -1,78 +1,79 @@
-# 🏪 Smart Shop Crowd Monitoring & Alert System
+# Smart Shop Crowd Monitoring and Alert System
 
-A real-time AI-powered crowd monitoring system built for retail shops. It uses computer vision to track how many customers are inside via CCTV — and automatically sends a mobile alert when the crowd gets too high.
+This is a real-time system that uses intelligence to monitor the crowd in retail shops. It uses computer vision to count the number of customers inside the shop via CCTV cameras.. Sends a mobile alert when the crowd gets too big.
 
-> I built this during my internship at Radhe Krishn Enterprises. The actual problem was simple — shop owners had no cheap way to know when their store was getting too crowded during peak hours or sale days.
+> I built this system when I was an intern at Radhe Krishn Enterprises. The problem was simple. Shop owners did not have a way to know when their shop was getting too crowded during peak hours or sale days.
 
----
+## Why I Built This System
 
-## 🚨 Why I Built This
+retail shops do not have staff to watch camera feeds all day. During festivals or weekends the shops get overcrowded. Which is bad for customers and bad for business. I wanted to fix this problem with something that's lightweight and affordable.
 
-Small retail shops don't have dedicated staff watching camera feeds all day. During festivals or weekends, overcrowding happens silently — bad for customers, bad for business. I wanted to fix this with something lightweight and affordable.
+## What This System Does
 
----
+This system plugs into any existing CCTV setup counts people in time using YOLOv8 and sends an instant alert to the shop owners phone when the crowd crosses a certain limit.
 
-## 💡 What It Does
+## Features of This System
 
-Plugs into any existing CCTV setup, counts people in real time using YOLOv8, and sends an instant alert to the shop owner's phone when crowd crosses a limit.
+- This system detects people in time using YOLOv8
 
----
+- It shows the live count of people on the screen
 
-## ✨ Features
+- It sends an instant alert to the shop owners phone when the crowd exceeds the threshold
 
-- 🎯 Real-time person detection using YOLOv8
-- 📊 Live footfall count displayed on screen
-- 📱 Instant Telegram alert when crowd exceeds threshold
-- ⏱️ 5-minute cooldown so alerts don't spam
-- 🔧 Threshold is adjustable (default set to 10 persons)
-- Works with both USB and IP/RTSP cameras
+- It has a 5-minute cooldown period so that alerts do not spam
 
----
+- The threshold is adjustable. It is set to 10 people by default
 
-## 🛠️ Tech Stack
+- This system works with both USB and IP/RTSP cameras
+
+## Technical Details of This System
 
 | Tool | Purpose |
+
 |------|---------|
-| YOLOv8 (Ultralytics) | Person detection |
-| OpenCV | Video capture and frame processing |
-| Python | Core logic |
-| Telegram Bot API | Mobile alerts |
-| NumPy | Frame array handling |
 
----
+| YOLOv8 (Ultralytics) | Person detection
 
-## ⚙️ How It Works
+OpenCV | Video capture and frame processing
 
-1. Camera feed captured frame by frame via OpenCV
-2. YOLOv8 runs on each frame and detects all persons
-3. Bounding boxes drawn, live count shown on screen
-4. Count exceeds threshold → Telegram alert sent to owner
-5. Cooldown timer prevents repeated alerts
+| Python | Core logic
 
----
+| Telegram Bot API | Mobile alerts
 
-## 📸 Sample Output
+NumPy | Frame array handling
 
+## How This System Works
 
+1. The camera feed is captured frame by frame via OpenCV
+
+2. YOLOv8 runs on each frame. Detects all people
+
+3. Bounding boxes are. The live count is shown on the screen
+
+4. If the count exceeds the threshold. A Telegram alert is sent to the owner
+
+5. A cooldown timer prevents repeated alerts
+
+## Sample Output of This System
 
 ![Demo](assets/demo.png)
 
+*11 people detected. Alert triggered*
 
-*11 persons detected — alert triggered*
-
----
-
-## 🔧 Run It
+## Run This System
 
 ```bash
+
 git clone https://github.com/yourusername/Smart-Shop-Crowd-Monitoring
+
 cd Smart-Shop-Crowd-Monitoring
+
 pip install -r requirements.txt
+
 python detect.py
+
 ```
 
----
+## Built By
 
-## 🙋 Built By
-
-**Anmol Gupta** — B.Tech CSE (AI & ML), KR Mangalam University
+**Anmol Gupta**. CSE (AI & ML) KR Mangalam University
